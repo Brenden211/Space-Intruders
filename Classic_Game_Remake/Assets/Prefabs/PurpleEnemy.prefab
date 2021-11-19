@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2248237648614878770}
   - component: {fileID: 2248237648614878769}
   m_Layer: 0
-  m_Name: Sprite 4
+  m_Name: PurpleEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
