@@ -1,7 +1,6 @@
 using UnityEngine;
 
-
-public class Invaders : MonoBehaviour
+public class Invaders_Experiments : MonoBehaviour
 {
     public Invader[] Prefabs;
 
@@ -50,14 +49,13 @@ public class Invaders : MonoBehaviour
             if (_direction == Vector3.right && invader.position.x > (rightEdge.x - 1.0f))
             {
                 AdvanceRow();
-            }
-            else if (_direction == Vector3.left && invader.position.x < (leftEdge.x + 1.0f))
+            } else if (_direction == Vector3.left && invader.position.x < (leftEdge.x + 1.0f))
             {
                 AdvanceRow();
             }
         }
 
-
+       
     }
 
     private void AdvanceRow()
@@ -72,3 +70,4 @@ public class Invaders : MonoBehaviour
 
 
 }
+
