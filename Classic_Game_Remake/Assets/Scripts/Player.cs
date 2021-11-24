@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 
     public float speed = 5.0f;
 
+    private bool _LaserActive;
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.A)  || Input.GetKey(KeyCode.LeftArrow))
@@ -25,10 +27,17 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
-        Instantiate(this.LaserPrefab, this.transform.position, Quaternion.identity);
-
+        if (!_LaserActive)
+        {
+            Projectile projectile = Instantiate(this.LaserPrefab, this.transform.position, Quaternion.identity);
+            projectile.destroyed += LaserDestroyed;
+            _LaserActive = true;
+        }
     }
 
-
+    private void LaserDestroyed()
+    {
+        _LaserActive = false;
+    }
 
 }
